@@ -1,0 +1,32 @@
+language: node_js
+sudo: required
+node_js:
+  - '4.3'
+  - '6.2'
+
+cache:
+  edge: true
+  directories:
+    - $(npm root -g)
+    - node_modules
+    - deep_modules
+    - $(npm config get prefix)/bin
+
+branches:
+  only:
+    - master
+    - dev
+    - stage
+    - test
+
+before_install:
+  - cp bin/test/package.json .
+
+after_success:
+  - npm run coverage
+
+env:
+  matrix:
+    # Parallelize backend and fronted test
+    - TEST_SUITE=backend
+    - TEST_SUITE=frontend
