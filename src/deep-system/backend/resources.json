@@ -1,0 +1,42 @@
+{
+  "async-config": {
+    "dump": {
+      "description": "Lambda that checks delayed services availability and dump a config file",
+      "type": "lambda",
+      "forceUserIdentity": false,
+      "scope": "private",
+      "cron": "0/10 * * * ? *",
+      "methods": ["GET"],
+      "source": "src/async-config/dump"
+    }
+  },
+  "scheduler": {
+    "rule": {
+      "description": "Enable/disable Lambda scheduled rule",
+      "type": "lambda",
+      "forceUserIdentity": false,
+      "scope": "private",
+      "methods": ["GET"],
+      "source": "src/scheduler/rule"
+    }
+  },
+  "ddb-eventual-consistency": {
+    "listen-queues": {
+      "description": "Listen for SQS offload queues messages",
+      "type": "lambda",
+      "forceUserIdentity": false,
+      "scope": "private",
+      "cron": "0/1 * * * ? *",
+      "methods": ["GET"],
+      "source": "src/ddb-eventual-consistency/listen-queues"
+    },
+    "pool-queue": {
+      "description": "Pool the SQS queue for DynamoDB offloaded operations on alarm received from CloudWatchAlarm through an SNS topic",
+      "type": "lambda",
+      "forceUserIdentity": false,
+      "scope": "private",
+      "methods": ["GET"],
+      "source": "src/ddb-eventual-consistency/pool-queue"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "deep-system-ddb-eventual-consistency-listen-queues",
+  "version": "0.0.1",
+  "description": "Listen for SQS offload queues messages",
+  "author": "Mitoc Group <hello@mitocgroup.com>",
+  "contributors": [
+    {
+      "name": "Alexander Cucer",
+      "email": "acucer@mitocgroup.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/MitocGroup/deep-microservices-system/issues"
+  },
+  "keywords": [
+    "DEEP",
+    "Config",
+    "SQS",
+    "EventualConsistency",
+    "DynamoDB"
+  ],
+  "scripts": {
+    "postinstall": "npm run compile",
+    "compile": "deepify compile es6 `pwd`"
+  },
+  "dependencies": {
+    "deep-framework": "^1.x.x"
+  },
+  "private": true
+}
