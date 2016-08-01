@@ -15,5 +15,9 @@
       "website": "https://www.deep.mg"
     }
   ],
-  "dependencies": { }
+  "frontendEngine": [
+    "angular"
+  ],
+  "dependencies": {
+  }
 }
