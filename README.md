@@ -1,9 +1,11 @@
 deep-microservices-system
 =========================
 
-[Repository_Badges_Placeholder]
+[![Build Status](https://travis-ci.org/MitocGroup/deep-microservices-system.svg?branch=master)](https://travis-ci.org/MitocGroup/deep-microservices-system)
+[![Test Coverage](https://codeclimate.com/repos/578ca127770d392b3a003e9a/badges/4bf8dee32379e65d0496/coverage.svg)](https://codeclimate.com/repos/578ca127770d392b3a003e9a/coverage)
 
-[Repository_Description_Placeholder]
+deep-microservices-system is a microservice designed to provide system capabilities
+in applications built on top of [DEEP Framework](https://github.com/MitocGroup/deep-framework).
 
 
 ## Getting Started
