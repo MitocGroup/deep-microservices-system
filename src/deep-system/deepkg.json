@@ -8,6 +8,7 @@
     "email": "hello@mitocgroup.com",
     "website": "http://www.mitocgroup.com"
   },
+  "propertyRoot": true,
   "contributors": [
     {
       "name": "DEEP Dev Team",
